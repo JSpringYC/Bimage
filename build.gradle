@@ -35,8 +35,9 @@ dependencies {
     compile "org.slf4j:slf4j-simple:$slf4jVersion"
 
     // Java Web
-    compile group: 'javax.servlet.jsp.jstl', name: 'jstl', version: '1.2'
-    compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.5'
+    compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.0'
+    compileOnly group: 'javax.servlet.jsp', name: 'javax.servlet.jsp-api', version: '2.3.1'
+    compile "jstl:jstl:1.2"
 
     // Spring Framework
     compile "org.springframework:spring-webmvc:$springVersion"
@@ -48,4 +49,8 @@ dependencies {
     compile "org.mybatis:mybatis:$mybatisVersion"
     // MyBatis Spring Bridge
     compile "org.mybatis:mybatis-spring:$mybatisSpringVersion"
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }
