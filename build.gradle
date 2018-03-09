@@ -42,6 +42,7 @@ dependencies {
     // Spring Framework
     compile "org.springframework:spring-webmvc:$springVersion"
     compile "org.springframework:spring-jdbc:$springVersion"
+    compile "org.springframework:spring-tx:$springVersion"
 
     // MySQL Connector Java
     compile "mysql:mysql-connector-java:$mysqlVersion"
